@@ -22,3 +22,5 @@ mv WhiteSur-Light-solid ~/.themes
 # install tweaks
 sudo apt install -y gnome-tweaks
 sudo apt install -y gnome-shell-extensions
+
+gsettings set org.gnome.desktop.interface cursor-size 42 # set big cursor
