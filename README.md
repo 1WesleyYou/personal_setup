@@ -30,3 +30,14 @@
 ```shell
     bash basic_setup.sh
 ```
+
+***p.s.*** remember to add the ssh key to your github profile
+
+The zshrc profile plugins part should look like: 
+
+```shell
+plugins=(
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+)
+```
