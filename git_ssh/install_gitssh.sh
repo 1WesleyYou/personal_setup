@@ -1,6 +1,6 @@
-sudo apt update
+sudo pacman -Syyu
 
-sudo apt install -y git git-lfs ssh
+sudo pacman -S git git-lfs ssh
 
 echo "press Enter to continue.."
 ssh-keygen -t rsa
