@@ -70,11 +70,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-	git
-	zsh-autosuggestions
-	zsh-syntax-highlighting
-	)
+plugins=(git vi-mode colored-man-pages colorize cp man command-not-found sudo ubuntu archlinux zsh-navigation-tools z extract history-substring-search python zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,3 +99,58 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+## 输入法，ibus和fcitx
+# export GTK_IM_MODULE=fcitx
+# export QT_IM_MODULE=fcitx
+# export QT4_IM_MODULE=fcitx
+# export XMODIFIERS=@im=fcitx
+
+alias cls='clear'
+
+## 安装trash-cli
+## trash-cli 常用功能
+## trash-put 将文件或目录移入回收站
+## trash-empty 清空回收站
+## trash-list 列出回收站中的文件
+## trash-restore 还原回收站中的文件
+## trash-rm 删除回首站中的单个文件
+# alias rm='trash-put'
+# alias rmclean='trash-empty'
+# alias rmrest='trash-restore'
+# alias rmlist='trash-list'
+# alias rmrm='trash-rm'
+
+## 安装 zsh-syntax-highlighting 不同发行版安装位置不同修改路径
+# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+## 安装 zsh-autosuggestions 不同发行版安装位置不同修改路径
+# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+## 修改提示字符颜色
+# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=cyan"
+
+export ALIEN_SECTIONS_LEFT=(
+  exit
+  #battery
+  user
+  path
+  newline
+  ssh
+  venv
+  prompt
+)
+
+export ALIEN_PROMPT_SYM=➔   #☭, ☯, ⚝ 
+
+export ALIEN_SECTIONS_RIGHT=(
+  time
+  vcs_branch:async
+  vcs_status:async
+  #vcs_dirty:async
+)
+
+export ALIEN_SECTION_TIME_FORMAT=%H:%M:%S # default is %r
+
+export ALIEN_THEME="blue" # the theme
+
+source ~/alien/alien.zsh
