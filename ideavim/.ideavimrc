@@ -31,4 +31,5 @@ nmap <leader>l :tabnext<CR>
 nmap <leader>h :tabprev<CR>
 
 " 快速删除本行（剪切）快捷键，内容保存在 vim 自带的删除寄存器中，不会影响 clipboard
-nnoremap <leader>d dd
+nmap <leader>d dd
+
