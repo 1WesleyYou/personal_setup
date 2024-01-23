@@ -1,0 +1,31 @@
+"" 基本功能设置
+" 搜索优化
+set incsearch
+set ignorecase
+set hlsearch
+set which-key
+
+" 行号：相对行号
+set number relativenumber
+
+" set NERDTree
+Plug 'preservim/nerdtree'
+set which-key
+set notimeout
+
+" 回到normal模式是英文输入法
+" set keep-english-in-normal  " 这会让ubuntu的中文输入法暴毙
+
+"" 键位映射 keymap
+" esc keymap 
+imap jj <Esc>
+imap jk <Esc>
+
+" 主键 空格
+let mapleader = " "
+" 开关文件树
+nmap <leader>e :NERDTreeToggle<CR>
+
+" 切换左右窗口
+nmap <leader>l :tabnext<CR>
+nmap <leader>h :tabprev<CR>
