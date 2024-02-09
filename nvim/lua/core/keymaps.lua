@@ -3,7 +3,8 @@ vim.g.mapleader = " "
 local keymap = vim.keymap
 
 -- ---------- 插入模式 ---------- ---
--- keymap.set("i", "jk", "<ESC>")
+keymap.set("i", "jk", "<ESC>")
+keymap.set("i","jj","<ESC>")
 
 -- ---------- 视觉模式 ---------- ---
 -- 单行或多行移动
@@ -25,3 +26,4 @@ keymap.set("n", "<S-H>", ":bprevious<CR>")
 -- ---------- 插件 ---------- ---
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+keymap.set("n","aa","A")
