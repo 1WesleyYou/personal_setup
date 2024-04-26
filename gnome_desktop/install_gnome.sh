@@ -1,5 +1,5 @@
-mkdir ~/.icons
-mkdir ~/.themes
+mkdir -p ~/.icons
+mkdir -p ~/.themes
 
 # move cursors to icons folder
 mv .icons/Bibata ~/.icons/
