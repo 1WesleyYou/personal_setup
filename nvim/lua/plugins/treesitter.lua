@@ -1,14 +1,16 @@
-require'nvim-treesitter.configs'.setup {
-  -- 添加不同语言
-  ensure_installed = { "vim", "bash", "c", "cpp", "javascript", "json", "lua", "python", "typescript", "tsx", "css", "rust", "markdown", "markdown_inline" }, -- one of "all" or a list of languages
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
-  highlight = { enable = true },
-  indent = { enable = true },
+-- Customize Treesitter
 
-  -- 不同括号颜色区分
-  rainbow = {
-    enable = true,
-    extended_mode = true,
-    max_file_lines = nil,
-  }
+---@type LazySpec
+return {
+  "nvim-treesitter/nvim-treesitter",
+  opts = function(_, opts)
+    -- add more things to the ensure_installed table protecting against community packs modifying it
+    opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
+      "lua",
+      "vim",
+      -- add more arguments for adding more treesitter parsers
+    })
+  end,
 }
